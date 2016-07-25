@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bubbles Typing Game</title>
+	<meta name="application-name" content="Bubbles Typing Game">
+	<meta name="author" content="KWENE NJUME Emmanuel">
+	<meta name="description" content="Play Bubbles Typing Game to know and to improve your keybord's typing frequency...">
+	<link rel="stylesheet" type="text/css" href="resources/css/app_template.css">
+</head>
+<body>
+<div class="screen">
+    <header class="l-header">
+        <div class="wrap">
+            <img src="resources/img/BubbleTypingGame.png" alt="Bubble Typing Game" />
+        </div>
+    </header>
+    
+    <div class="wrap">
+        <section id="content">
+			<div id="gamescreen" class="gamescreen"></div>
+			<div class="main" id="main">
+				<ul class="menu" id="menu">
+					<li id="menuscreen">
+						<h1 class="menu-title">Game Menu</h1>
+						<p>
+							<i>Choose your level and start playing the game!</i>
+						</p>
+						<p id="gameMode">
+							<a href="#" id="modeBeginner">Beginner</a>
+							<a href="#" id="modeMedium">Normal</a>
+							<a href="#" id="modePro">Expert Mode</a>
+						</p>
+					</li>
+					<!-- end #menuscreen -->
+					
+					<li id="pausescreen">
+						<h1 class="menu-title">Paused!</h1>
+						<p>
+							<i>Type "space keybord touch" to come back to the current game!</i>
+						</p>
+						<p>
+							<a href="#" class="returnMenu">Game Menu</a>
+						</p>
+					</li>
+					<!-- end #pausescreen -->
+					
+					<li id="scorescreen">
+						<h1 class="menu-title">Game Over</h1>
+						<p id="gameresult">
+						</p>
+						<p>
+							<a href="#" class="returnMenu">Return to Game Menu</a>
+						</p>
+					</li>
+					<!-- end #scorescreen -->
+				</ul>
+			</div>
+            
+            <div id="stat">
+                <div class="missed">
+                    MISSED
+                    <span id="missed">00</span>
+                </div>
+                <div class="score">
+                    TIME
+                    <span id="timer">00</span>
+                    SCORE
+                    <span id="score">00</span>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="l-footer">
+                Copyright &#169; November 2015 - <a target="_blank" href="http://www.emmanuelkwene.com">Emmanuel KWENE</a>
+        </footer>
+    </div>
+
+	<audio id="soundGoal">
+		<source src="resources/sound/ogg/remove.ogg" />
+		<source src="resources/sound/mp3/remove.mp3" />
+		Your browser does not support HTML5 audio.
+	</audio>
+
+	<audio id="soundFailure">
+		<source src="resources/sound/ogg/fail.ogg" />
+		<source src="resources/sound/mp3/fail.mp3" />
+		Your browser does not support HTML5 audio.
+	</audio>
+
+	<audio id="soundNope">
+		<source src="resources/sound/ogg/nope.ogg" />
+		<source src="resources/sound/mp3/nope.mp3" />
+		Your browser does not support HTML5 audio.
+	</audio>
+
+	<audio id="soundEnd">
+		<source src="resources/sound/ogg/tada.ogg" />
+		<source src="resources/sound/mp3/tada.mp3" />
+		Your browser does not support HTML5 audio.
+	</audio>
+
+	<script type="text/javascript" src="resources/js/vendor/jquery.min.js"></script>
+	<script type="text/javascript" src="resources/js/gamelogic.js"></script>
+	<script type="text/javascript"> var $ = jQuery; $(function() { var p = new Platform(); p.init(); })(); </script>
+
+</div>	
+</body>
+</html>
